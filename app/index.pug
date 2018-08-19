@@ -3,4 +3,22 @@ html(lang="ru-RU")
 	head
 		include template/head.pug
 	body
+		section.container
+			aside.sidebar
+				.sidebar__logoWrap
+					.sidebar__logo
+				.sidebar__nameLogoWrap
+					p.sidebar__nameLogo
+				nav.verticalMenu.sidebar__verticalMenu
+					ul.verticalMenu__list
+						mixin verticalListItemMix(link, nameLink)
+							li.verticalMenu__listItem
+								a(class="verticalMenu__itemLink" href=(`${link}`))= nameLink
+						+verticalListItemMix('#', 'HOME')
+						+verticalListItemMix('#', 'PORTFOLIO')
+						+verticalListItemMix('#', 'ABOUT US')
+						+verticalListItemMix('#', 'OUR TEAM')
+						+verticalListItemMix('#', 'OUR CLIENTS')
+						+verticalListItemMix('#', 'FEEDBACK')
+						+verticalListItemMix('#', 'CONTACT US')
 		include template/scripts.pug
