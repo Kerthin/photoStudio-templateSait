@@ -28,7 +28,7 @@ html(lang="ru-RU")
 						.homeBlock__nameLogoWrap
 							p.homeBlock__nameLogo
 				section.portfolioBlock
-					mixin horizontalListItemMix(modifierName, pathCardStructure, portfolioBlockTitleMix, portfolioBlockTextMix, portfolioBlockSignatureMix)
+					mixin gridItemMix(modifierName, pathCardStructure, portfolioBlockTitleMix, portfolioBlockTextMix, portfolioBlockSignatureMix)
 						- var portfolioBlockTitle = `${portfolioBlockTitleMix}`;
 						- var portfolioBlockText = `${portfolioBlockTextMix}`;
 						- var portfolioBlockSignature = `${portfolioBlockSignatureMix}`;
@@ -40,11 +40,34 @@ html(lang="ru-RU")
 										include template/partials/cardStructure.pug
 								default
 									p enter another number
-					+horizontalListItemMix('', '1')
-					+horizontalListItemMix('', '0')
-					+horizontalListItemMix('', '1')
-					+horizontalListItemMix('', '0')
-					+horizontalListItemMix('', '1')
-					+horizontalListItemMix('portfolioBlock__cell_gr_2-4', '0')
-					+horizontalListItemMix('portfolioBlock__cell_gc_1-3', '0')
+					+gridItemMix('', '1')
+					+gridItemMix('', '0')
+					+gridItemMix('', '1')
+					+gridItemMix('', '0')
+					+gridItemMix('', '1')
+					+gridItemMix('portfolioBlock__cell_gr_2-4', '0')
+					+gridItemMix('portfolioBlock__cell_gc_1-3', '0')
+				section.aboutUsBlock
+					.contentBox.aboutUsBlock__contentBox
+						article.contentBox__titleWrap
+							h1.contentBox__title
+						artcile.contentBox__textWrap
+							p.contentBox__text
+						ul.contentBox__list
+							mixin aboutUsListItemMix(fontAwesomeClassName, descriptionTitleMix, descriptionTextMix)
+								li.contentBox__listItem
+									.contentBox__iconItemWrap
+										.contentBox__iconItemRect
+											i(class=`fas fa-${fontAwesomeClassName}` aria-hidden="true")
+									article.contentBox__descriptionWrap
+										.contentBox__descriptionTitleWrap
+											h2.contentBox__descriptionTitle= descriptionTitleMix
+										.contentBox__descriptionTextWrap
+											p.contentBox__descriptionText= descriptionTextMix
+							+aboutUsListItemMix('layer-group', '','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, in, sunt.')
+							+aboutUsListItemMix('pencil-alt', '','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, animi dolor.')
+							+aboutUsListItemMix('chart-line', '','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, fuga, accusamus.')
+							+aboutUsListItemMix('drafting-compass', '','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, consequuntur, eius!')
+							+aboutUsListItemMix('bolt', '','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, odio, nemo.')
+							+aboutUsListItemMix('angle-double-down', '','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nobis saepe!')
 		include template/scripts.pug
