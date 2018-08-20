@@ -27,4 +27,24 @@ html(lang="ru-RU")
 						.homeBlock__logo
 						.homeBlock__nameLogoWrap
 							p.homeBlock__nameLogo
+				section.portfolioBlock
+					mixin horizontalListItemMix(modifierName, pathCardStructure, portfolioBlockTitleMix, portfolioBlockTextMix, portfolioBlockSignatureMix)
+						- var portfolioBlockTitle = `${portfolioBlockTitleMix}`;
+						- var portfolioBlockText = `${portfolioBlockTextMix}`;
+						- var portfolioBlockSignature = `${portfolioBlockSignatureMix}`;
+							case `${pathCardStructure}`
+								when '0'
+									div(class=`portfolioBlock__cell ${modifierName}`)
+								when '1'
+									div(class=`portfolioBlock__cell ${modifierName}`)
+										include template/partials/cardStructure.pug
+								default
+									p enter another number
+					+horizontalListItemMix('', '1')
+					+horizontalListItemMix('', '0')
+					+horizontalListItemMix('', '1')
+					+horizontalListItemMix('', '0')
+					+horizontalListItemMix('', '1')
+					+horizontalListItemMix('portfolioBlock__cell_gr_2-4', '0')
+					+horizontalListItemMix('portfolioBlock__cell_gc_1-3', '0')
 		include template/scripts.pug
