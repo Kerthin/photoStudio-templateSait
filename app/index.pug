@@ -72,8 +72,29 @@ html(lang="ru-RU")
 							+aboutUsListItemMix('angle-double-down', '','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nobis saepe!')
 				section.ourTeam
 					.ourTeam__descriptionBox
-						.ourTeam__descriptionTitleWrap
+						article.ourTeam__descriptionTitleWrap
 							h1.ourTeam__descriptionTitle
-						.ourTeam__descriptionTextWrap
+						artcile.ourTeam__descriptionTextWrap
 							p.ourTeam__descriptionText
+				section.ourClients
+					.ourClients__contentBox
+						.ourClients__titleWrap
+							h1.ourClients__title
+						.clientsSwipeSlider.ourClients__slider
+							.swiper-container
+								.swiper-wrapper
+									mixin swiperParalax(img)
+										div(class=`swiper-slide swiper-wrapper_bg swiper-wrapper_bg_${img}`)
+									+swiperParalax('greenBikeInverse')
+									+swiperParalax('redBikeInverse')
+									+swiperParalax('whiteBikeInverse')
+									+swiperParalax('greenBikeInverse')
+									+swiperParalax('redBikeInverse')
+									+swiperParalax('whiteBikeInverse')
+									+swiperParalax('greenBikeInverse')
+									+swiperParalax('redBikeInverse')
+									+swiperParalax('whiteBikeInverse')
+								.swiper-pagination
+								.swiper-button-next
+								.swiper-button-prev
 		include template/scripts.pug
