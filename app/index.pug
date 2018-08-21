@@ -3,7 +3,7 @@ html(lang="ru-RU")
 	head
 		include template/head.pug
 	body
-		section.container
+		section.container.clearfix
 			aside.sidebar
 				.sidebar__logoWrap
 					.sidebar__logo
@@ -28,7 +28,7 @@ html(lang="ru-RU")
 					.homeBlock__logoWrap
 						.homeBlock__logo
 						.homeBlock__nameLogoWrap
-							p.homeBlock__nameLogo
+							p.homeBlock__nameLogo WELCOME TO KERTHIN SHOT
 				section.portfolioBlock
 					mixin gridItemMix(modifierName, pathCardStructure, portfolioBlockTitleMix, portfolioBlockTextMix, portfolioBlockSignatureMix)
 						- var portfolioBlockTitle = `${portfolioBlockTitleMix}`;
