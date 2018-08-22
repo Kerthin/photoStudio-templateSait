@@ -12,3 +12,8 @@
 	caruselSwiperInitialization.js
 ********************/
 //= partials/caruselSwiperInitialization.js
+
+/********************
+	twitterWidgets.js
+********************/
+//= https://platform.twitter.com/widgets.js
