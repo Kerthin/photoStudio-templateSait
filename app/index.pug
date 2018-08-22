@@ -72,31 +72,37 @@ html(lang="ru-RU")
 							+aboutUsListItemMix('drafting-compass', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, consequuntur, eius!')
 							+aboutUsListItemMix('bolt', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, odio, nemo.')
 							+aboutUsListItemMix('angle-double-down', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nobis saepe!')
-				section.ourTeam
-					.ourTeam__descriptionBox
-						article.ourTeam__descriptionTitleWrap
-							h1.ourTeam__descriptionTitle
-						artcile.ourTeam__descriptionTextWrap
-							p.ourTeam__descriptionText
-				section.ourClients
-					.ourClients__contentBox
-						.ourClients__titleWrap
-							h1.ourClients__title
-						.clientsSwipeSlider.ourClients__slider
+				section.ourTeamBlock
+					.ourTeamBlock__descriptionBox
+						article.ourTeamBlock__descriptionTitleWrap
+							.ourTeamBlock__descriptionTitleBox
+								h1.ourTeamBlock__descriptionTitle KERTHIN
+							.ourTeamBlock__descriptionImgBox
+							.ourTeamBlock__descriptionTitleBox
+								h1.ourTeamBlock__descriptionTitle SHOT
+						artcile.ourTeamBlock__descriptionTextWrap
+							p.ourTeamBlock__descriptionText Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga laborum voluptatum excepturi rem tempora sunt ipsa, pariatur consequuntur ipsam aliquid, quo ratione sed facilis culpa commodi voluptatem odio impedit voluptate laboriosam minima eum reiciendis tempore.
+				section.ourClientsBlock
+					.ourClientsBlock__contentBox
+						.ourClientsBlock__titleWrap
+							h1.ourClientsBlock__title WHAT ARE OUR CLIENTS
+						.clientsSwipeSlider.ourClientsBlock__slider
 							.swiper-container
 								.swiper-wrapper
 									mixin swiperParalax(img)
 										div(class=`swiper-slide swiper-wrapper_bg swiper-wrapper_bg_${img}`)
-									+swiperParalax('greenBikeInverse')
-									+swiperParalax('redBikeInverse')
-									+swiperParalax('whiteBikeInverse')
-									+swiperParalax('greenBikeInverse')
-									+swiperParalax('redBikeInverse')
-									+swiperParalax('whiteBikeInverse')
-									+swiperParalax('greenBikeInverse')
-									+swiperParalax('redBikeInverse')
-									+swiperParalax('whiteBikeInverse')
-								.swiper-pagination
+									+swiperParalax('client1')
+									+swiperParalax('client2')
+									+swiperParalax('client3')
+									+swiperParalax('client4')
+									+swiperParalax('client5')
+									+swiperParalax('client6')
+									+swiperParalax('client7')
+									+swiperParalax('client8')
+									+swiperParalax('client9')
+									+swiperParalax('client10')
+									+swiperParalax('client11')
+									+swiperParalax('client12')
 								.swiper-button-next
 								.swiper-button-prev
 				section.feedbackBlock
