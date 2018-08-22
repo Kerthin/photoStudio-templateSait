@@ -166,17 +166,56 @@
 			grid-template-rows: repeat(3, 1fr);
 
 			.portfolioBlock__cell {
+				&:nth-of-type(1) {
+					.cardContentBox__signature {
+						background-image: url('../image/signature.png');
+					}
+				}
+
+				&:nth-of-type(3) {
+					.cardContentBox__signature {
+						background-image: url('../image/signature2.png');
+					}
+				}
+
+				&:nth-of-type(5) {
+					.cardContentBox__signature {
+						background-image: url('../image/signature3.png');
+					}
+				}
+
+				&.portfolioBlock__cell_bg_gucciSquare {
+					background-image: url('../image/gucciSquare.jpg');
+					background-size: cover;
+					background-position: left;
+					background-repeat: no-repeat;
+				}
+
+				&.portfolioBlock__cell_bg_jaredLetoGucciSquare {
+					background-image: url('../image/beyonceGucciSquare.jpg');
+					background-size: cover;
+					background-position: left;
+					background-repeat: no-repeat;
+				}
 
 				&.portfolioBlock__cell_gr_2-4 {
 					grid-column: 3/4;
 					grid-row: 2/4;
 					background-color: blue;
+					background-image: url('../image/jaredLetoGucciVertical.jpg');
+					background-size: cover;
+					background-position: left;
+					background-repeat: no-repeat;
 				}
 
 				&.portfolioBlock__cell_gc_1-3 {
 					grid-column: 1/3;
 					grid-row: 3/4;
 					background-color: yellow;
+					background-image: url('../image/gucciRect.jpg');
+					background-size: cover;
+					background-position: left;
+					background-repeat: no-repeat;
 				}
 
 				.portfolioBlock__cardContentBox {
@@ -230,7 +269,6 @@
 							.cardContentBox__signature {
 								width: 100%;
 								height: 100%;
-								background-image: url('../image/signature.png');
 								background-size: contain;
 								background-position: left;
 								background-repeat: no-repeat;
