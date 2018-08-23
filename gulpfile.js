@@ -25,7 +25,7 @@ var		path 			= {
 			app:			{
 				image: 	'app/image/**/*.*'	,
 				fonts: 	'app/fonts/**/*.*'	,
-				scss: 	'app/scss/**/*.scss',
+				scss: 	'app/scss/*.scss',
 				pug:	'app/*.pug'			,
 				js: 	'app/js/main.js'	
 			},
@@ -33,7 +33,7 @@ var		path 			= {
 				image: 	'app/image/**/*.*',
 				fonts: 	'app/fonts/**/*.*',
 				html: 	'app/**/*.html',
-				scss: 	'app/scss/*.scss',
+				scss: 	'app/*.scss',
 				pug:	'app/*.pug'			,
 				css: 	'app/css/**/*.css',
 				js: 	'app/js/**/*.js'
@@ -56,7 +56,7 @@ var 	config			= {
 gulp.task('html:dist',	function()	{
 	gulp.src(path.app.pug)
 		.pipe(pug({
-			pretty: true
+			pretty: false
 		}))
 		.pipe(gulp.dest(path.dist.html))
 		.pipe(reload({stream:	true}));	//Перезагрузка сервера для обновлений
@@ -77,7 +77,7 @@ gulp.task('style:dist',	function()	{
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(prefixer())
-		//.pipe(cssmin())
+		.pipe(cssmin())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.dist.css))
 		.pipe(reload({stream:	true}));
