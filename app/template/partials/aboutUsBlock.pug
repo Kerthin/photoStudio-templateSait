@@ -1,0 +1,23 @@
+section#js-aboutUsBlock.aboutUsBlock
+	.contentBox.aboutUsBlock__contentBox
+		article.contentBox__titleWrap
+			h1.contentBox__title WHAT ARE OUR SKILLS
+		artcile.contentBox__textWrap
+			p.contentBox__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vitae numquam eum optio maxime, aspernatur impedit, voluptate accusamus illum facere illo error suscipit qui modi magnam pariatur maiores iusto enim deserunt saepe quibusdam. Expedita velit voluptates.
+		ul.contentBox__list 
+			mixin aboutUsListItemMix(fontAwesomeClassName, descriptionTitleMix, descriptionTextMix)
+				li.contentBox__listItem
+					.contentBox__iconItemWrap
+						.contentBox__iconItemRect
+							i(class=`fas fa-${fontAwesomeClassName}` aria-hidden="true")
+					article.contentBox__descriptionWrap
+						.contentBox__descriptionTitleWrap
+							h2.contentBox__descriptionTitle= descriptionTitleMix
+						.contentBox__descriptionTextWrap
+							p.contentBox__descriptionText= descriptionTextMix
+			+aboutUsListItemMix('layer-group', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, in, sunt.')
+			+aboutUsListItemMix('pencil-alt', 'GRAPHICS DESIGN','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, animi dolor.')
+			+aboutUsListItemMix('chart-line', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, fuga, accusamus.')
+			+aboutUsListItemMix('drafting-compass', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, consequuntur, eius!')
+			+aboutUsListItemMix('bolt', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, odio, nemo.')
+			+aboutUsListItemMix('angle-double-down', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nobis saepe!')

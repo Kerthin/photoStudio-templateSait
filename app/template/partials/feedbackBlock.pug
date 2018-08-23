@@ -1,0 +1,14 @@
+section#js-feedbackBlock.feedbackBlock
+	.feedbackBlock__contentBox
+		.feedbackBlock__titleWrap
+			h1.feedbackBlock__title SEND US A MESSAGE
+		.feedbackBlock__formWrap
+			form.feedbackBlock__form
+				mixin inputFeedbackMix(inputTypeMix, inputPlaceholderMix, inputSizeMix)
+					input(class=`feedbackBlock__input ${inputSizeMix}` type=`${inputTypeMix}` placeholder=`${inputPlaceholderMix}`)
+				+inputFeedbackMix('name', 'Username *', '')
+				+inputFeedbackMix('email', 'Email *', '')
+				+inputFeedbackMix('text', 'Username *', '')
+				+inputFeedbackMix('number', 'Number *', '')
+				+inputFeedbackMix('text', '', 'feedbackBlock__input_size-messageInput')
+				button(class="feedbackBlock__button" type="submit") SEND A MASSAGE

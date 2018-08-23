@@ -1,0 +1,19 @@
+aside.sidebar
+	.sidebar__logoWrap
+		.sidebar__logo
+		.sidebar__nameLogoWrap
+			p.sidebar__nameLogo KERTHIN SHOT
+		.sidebar__nameCreatorWrap
+			p.sidebar__nameCreator BY KERTHIN
+	nav.verticalMenu.sidebar__verticalMenu
+		ul.verticalMenu__list
+			mixin verticalListItemMix(link, nameLink)
+				li.verticalMenu__listItem
+					a(class="verticalMenu__itemLink" href=(`${link}`))= nameLink
+			+verticalListItemMix('#js-homeBlock', 'HOME')
+			+verticalListItemMix('#js-portfolioBlock', 'PORTFOLIO')
+			+verticalListItemMix('#js-aboutUsBlock', 'ABOUT US')
+			+verticalListItemMix('#js-ourTeamBlock', 'OUR TEAM')
+			+verticalListItemMix('#js-ourClientsBlock', 'OUR CLIENTS')
+			+verticalListItemMix('#js-feedbackBlock', 'FEEDBACK')
+			+verticalListItemMix('#js-contactUsBlock', 'CONTACT US')

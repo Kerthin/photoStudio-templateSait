@@ -1,0 +1,23 @@
+section#js-ourClientsBlock.ourClientsBlock
+	.ourClientsBlock__contentBox
+		.ourClientsBlock__titleWrap
+			h1.ourClientsBlock__title WHAT ARE OUR CLIENTS
+		.clientsSwipeSlider.ourClientsBlock__slider
+			.swiper-container
+				.swiper-wrapper
+					mixin swiperParalax(img)
+						div(class=`swiper-slide swiper-wrapper_bg swiper-wrapper_bg_${img}`)
+					+swiperParalax('client1')
+					+swiperParalax('client2')
+					+swiperParalax('client3')
+					+swiperParalax('client4')
+					+swiperParalax('client5')
+					+swiperParalax('client6')
+					+swiperParalax('client7')
+					+swiperParalax('client8')
+					+swiperParalax('client9')
+					+swiperParalax('client10')
+					+swiperParalax('client11')
+					+swiperParalax('client12')
+				.swiper-button-next
+				.swiper-button-prev

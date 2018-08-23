@@ -1,0 +1,20 @@
+section#js-portfolioBlock.portfolioBlock
+	mixin gridItemMix(modifierName, pathCardStructure, portfolioBlockTitleMix, portfolioBlockTextMix, portfolioBlockSignatureMix)
+		- var portfolioBlockTitle = `${portfolioBlockTitleMix}`;
+		- var portfolioBlockText = `${portfolioBlockTextMix}`;
+		- var portfolioBlockSignature = `${portfolioBlockSignatureMix}`;
+			case `${pathCardStructure}`
+				when '0'
+					div(class=`portfolioBlock__cell ${modifierName}`)
+				when '1'
+					div(class=`portfolioBlock__cell ${modifierName}`)
+						include cardStructure.pug
+				default
+					p enter another number
+	+gridItemMix('portfolioBlock__cell_1', '1', 'INDIAN SUMMER SKV COLLECTION', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam a nesciunt perspiciatis soluta odio sint provident, explicabo ullam, quos maxime, aperiam adipisci.')
+	+gridItemMix('portfolioBlock__cell_bg_gucciSquare portfolioBlock__cell_2', '0')
+	+gridItemMix('portfolioBlock__cell_3', '1', 'DD DENOM COLLECTION', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ea, iure nulla.')
+	+gridItemMix('portfolioBlock__cell_bg_jaredLetoGucciSquare portfolioBlock__cell_4', '0')
+	+gridItemMix('portfolioBlock__cell_5', '1', 'DHENEB DENOM COLLECTION', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam a nesciunt perspiciatis soluta odio sint provident, explicabo ullam, quos maxime, aperiam adipisci.')
+	+gridItemMix('portfolioBlock__cell_gr_2-4 portfolioBlock__cell_6', '0')
+	+gridItemMix('portfolioBlock__cell_gc_1-3 portfolioBlock__cell_7', '0')
