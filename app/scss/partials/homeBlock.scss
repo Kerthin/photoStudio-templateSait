@@ -1,0 +1,45 @@
+.homeBlock {
+	background-image: url('../image/forest.jpg');
+	background-size: cover;
+	background-position: fixed;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	width: 100%;
+	height: 100vh;
+
+	.homeBlock__logoWrap {
+		width: 40%;
+		height: 50%;
+		position: relative;
+		top: 35%;
+		left: 50%;
+		transform: translate(-50%, -35%);
+
+		.homeBlock__logo {
+			width: 100%;
+			height: 80%;
+			background-image: url('../image/ellipseKazula.png');
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.homeBlock__nameLogoWrap {
+			width: 100%;
+			height: 20%;
+			text-align: center;
+			display: table;
+
+			.homeBlock__nameLogo {
+				display: table-cell;
+				vertical-align: middle;
+				text-decoration: none;
+				color: #fff;
+				font-family: 'Roboto', sans-serif;
+				font-size: 2.5vmin;
+				font-weight: 100;
+				letter-spacing: 1px;
+			}
+		}
+	}
+}
