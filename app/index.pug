@@ -16,22 +16,21 @@ html(lang="ru-RU")
 						mixin verticalListItemMix(link, nameLink)
 							li.verticalMenu__listItem
 								a(class="verticalMenu__itemLink" href=(`${link}`))= nameLink
-						+verticalListItemMix('#', 'HOME')
-						+verticalListItemMix('#', 'PORTFOLIO')
-						+verticalListItemMix('#', 'ABOUT US')
-						+verticalListItemMix('#', 'OUR TEAM')
-						+verticalListItemMix('#', 'OUR CLIENTS')
-						+verticalListItemMix('#', 'FEEDBACK')
-						+verticalListItemMix('#', 'CONTACT US')
+						+verticalListItemMix('#js-homeBlock', 'HOME')
+						+verticalListItemMix('#js-portfolioBlock', 'PORTFOLIO')
+						+verticalListItemMix('#js-aboutUsBlock', 'ABOUT US')
+						+verticalListItemMix('#js-ourTeamBlock', 'OUR TEAM')
+						+verticalListItemMix('#js-ourClientsBlock', 'OUR CLIENTS')
+						+verticalListItemMix('#js-feedbackBlock', 'FEEDBACK')
+						+verticalListItemMix('#js-contactUsBlock', 'CONTACT US')
 			main.content
-				section.homeBlock
+				section#js-homeBlock.homeBlock
 					.homeBlock__logoWrap
 						.homeBlock__logo
 						.homeBlock__nameLogoWrap
 							p.homeBlock__nameLogo WELCOME TO KERTHIN SHOT
 					.homeBlock__scrollDownWrap
-
-				section.portfolioBlock
+				section#js-portfolioBlock.portfolioBlock
 					mixin gridItemMix(modifierName, pathCardStructure, portfolioBlockTitleMix, portfolioBlockTextMix, portfolioBlockSignatureMix)
 						- var portfolioBlockTitle = `${portfolioBlockTitleMix}`;
 						- var portfolioBlockText = `${portfolioBlockTextMix}`;
@@ -44,14 +43,14 @@ html(lang="ru-RU")
 										include template/partials/cardStructure.pug
 								default
 									p enter another number
-					+gridItemMix('', '1', 'INDIAN SUMMER SKV COLLECTION', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam a nesciunt perspiciatis soluta odio sint provident, explicabo ullam, quos maxime, aperiam adipisci.')
-					+gridItemMix('portfolioBlock__cell_bg_gucciSquare', '0')
-					+gridItemMix('', '1', 'DD DENOM COLLECTION', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ea, iure nulla.')
-					+gridItemMix('portfolioBlock__cell_bg_jaredLetoGucciSquare', '0')
-					+gridItemMix('', '1', 'DHENEB DENOM COLLECTION', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam a nesciunt perspiciatis soluta odio sint provident, explicabo ullam, quos maxime, aperiam adipisci.')
-					+gridItemMix('portfolioBlock__cell_gr_2-4', '0')
-					+gridItemMix('portfolioBlock__cell_gc_1-3', '0')
-				section.aboutUsBlock
+					+gridItemMix('portfolioBlock__cell_1', '1', 'INDIAN SUMMER SKV COLLECTION', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam a nesciunt perspiciatis soluta odio sint provident, explicabo ullam, quos maxime, aperiam adipisci.')
+					+gridItemMix('portfolioBlock__cell_bg_gucciSquare portfolioBlock__cell_2', '0')
+					+gridItemMix('portfolioBlock__cell_3', '1', 'DD DENOM COLLECTION', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ea, iure nulla.')
+					+gridItemMix('portfolioBlock__cell_bg_jaredLetoGucciSquare portfolioBlock__cell_4', '0')
+					+gridItemMix('portfolioBlock__cell_5', '1', 'DHENEB DENOM COLLECTION', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam a nesciunt perspiciatis soluta odio sint provident, explicabo ullam, quos maxime, aperiam adipisci.')
+					+gridItemMix('portfolioBlock__cell_gr_2-4 portfolioBlock__cell_6', '0')
+					+gridItemMix('portfolioBlock__cell_gc_1-3 portfolioBlock__cell_7', '0')
+				section#js-aboutUsBlock.aboutUsBlock
 					.contentBox.aboutUsBlock__contentBox
 						article.contentBox__titleWrap
 							h1.contentBox__title WHAT ARE OUR SKILLS
@@ -74,7 +73,7 @@ html(lang="ru-RU")
 							+aboutUsListItemMix('drafting-compass', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, consequuntur, eius!')
 							+aboutUsListItemMix('bolt', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, odio, nemo.')
 							+aboutUsListItemMix('angle-double-down', 'PROJECT DOCUMENTATION','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nobis saepe!')
-				section.ourTeamBlock
+				section#js-ourTeamBlock.ourTeamBlock
 					.ourTeamBlock__descriptionBox
 						article.ourTeamBlock__descriptionTitleWrap
 							.ourTeamBlock__descriptionTitleBox
@@ -84,7 +83,7 @@ html(lang="ru-RU")
 								h1.ourTeamBlock__descriptionTitle SHOT
 						artcile.ourTeamBlock__descriptionTextWrap
 							p.ourTeamBlock__descriptionText Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga laborum voluptatum excepturi rem tempora sunt ipsa, pariatur consequuntur ipsam aliquid, quo ratione sed facilis culpa commodi voluptatem odio impedit voluptate laboriosam minima eum reiciendis tempore.
-				section.ourClientsBlock
+				section#js-ourClientsBlock.ourClientsBlock
 					.ourClientsBlock__contentBox
 						.ourClientsBlock__titleWrap
 							h1.ourClientsBlock__title WHAT ARE OUR CLIENTS
@@ -107,7 +106,7 @@ html(lang="ru-RU")
 									+swiperParalax('client12')
 								.swiper-button-next
 								.swiper-button-prev
-				section.feedbackBlock
+				section#js-feedbackBlock.feedbackBlock
 					.feedbackBlock__contentBox
 						.feedbackBlock__titleWrap
 							h1.feedbackBlock__title SEND US A MESSAGE
@@ -121,7 +120,7 @@ html(lang="ru-RU")
 								+inputFeedbackMix('number', 'Number *', '')
 								+inputFeedbackMix('text', '', 'feedbackBlock__input_size-messageInput')
 								button(class="feedbackBlock__button" type="submit") SEND A MASSAGE
-				section.contactUsBlock
+				section#js-contactUsBlock.contactUsBlock
 					.contactUsBlock__contentBox
 						.contactUsBlock__logo
 						article.contactUsBlock__communicationWrap
@@ -129,10 +128,10 @@ html(lang="ru-RU")
 								.contactUsBlock__communicationTitleWrap
 									h1.contactUsBlock__communicationTitle CONTACT US
 								.contactUsBlock__communicationLinksWrap
-									address.contactUsBlock__communicationItem 201 N Los Angeles St # 23, Los Angeles, CA 90012, USA <br>
-									a(class="contactUsBlock__communicationItem" href="mailto: example@mail.ru") Email: belichenko.roden@list.ru <br>
-									a(class="contactUsBlock__communicationItem" href="tel: +1 213-622-8745") Phone: +1 213-622-8745 <br>
-									a(class="contactUsBlock__communicationItem" href="tel: +1 213-626-7010") Phone: +1 213-626-7010 <br>
+									address.contactUsBlock__communicationItem 201 N Los Angeles St # 23, Los Angeles, CA 90012, USA <br> <br>
+									a(class="contactUsBlock__communicationItem" href="mailto: example@mail.ru") Email: belichenko.roden@list.ru <br> <br>
+									a(class="contactUsBlock__communicationItem" href="tel: +1 213-622-8745") Phone: +1 213-622-8745 <br> <br>
+									a(class="contactUsBlock__communicationItem" href="tel: +1 213-626-7010") Phone: +1 213-626-7010 <br> <br>
 									a(class="contactUsBlock__communicationItem" href="fax: +1 213-628-9258") Fax: +1 213-628-9258
 						article.contactUsBlock__twitterWrap
 							.contactUsBlock__twitterBox

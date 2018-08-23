@@ -16,6 +16,10 @@
 		height: 100vh;
 		background-color: #1e1e1e;
 
+		@media screen and (max-width: 1240px) {
+			display: none;
+		}
+
 		.sidebar__logoWrap {
 			width: 100%;
 			height: 40%;
@@ -93,6 +97,10 @@
 							border: 0;
 						}
 
+						&.js-active {
+							background-color: #2c2c2c;
+						}
+
 						.verticalMenu__itemLink {
 							display: table-cell;
 							vertical-align: middle;
@@ -100,6 +108,10 @@
 							color: #fff;
 							font-family: 'Roboto', sans-serif;
 							font-size: 1.2vmin;
+
+							&.active {
+								color: #2c2c2c;
+							}
 						}
 					}
 				}
@@ -112,6 +124,10 @@
 		float: right;
 		width: 80%;
 		height: auto;
+
+		@media screen and (max-width: 1240px) {
+			width: 100%;
+		}
 
 		.homeBlock {
 			background-image: url('../image/forest.jpg');
@@ -166,22 +182,66 @@
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(3, 1fr);
 
+			@media screen and (max-width: 960px) {
+				height: 133.333333333vh;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(4, 1fr);
+			}
+
+			@media screen and (max-width: 768px) {
+				height: 400vh;
+				grid-template-columns: repeat(1, 1fr);
+				grid-template-rows: repeat(8, 1fr);
+			}
+
 			.portfolioBlock__cell {
-				&:nth-of-type(1) {
+				&.portfolioBlock__cell_1 {
 					.cardContentBox__signature {
 						background-image: url('../image/signature.png');
 					}
 				}
 
-				&:nth-of-type(3) {
-					.cardContentBox__signature {
-						background-image: url('../image/signature2.png');
+				&.portfolioBlock__cell_2 {
+					@media screen and (max-width: 768px) {
+						grid-row: 2/3;
 					}
 				}
 
-				&:nth-of-type(5) {
+				&.portfolioBlock__cell_3 {
+					.cardContentBox__signature {
+						background-image: url('../image/signature2.png');
+					}
+
+					@media screen and (max-width: 960px) {
+						grid-row: 3/4;
+					}
+
+					@media screen and (max-width: 768px) {
+						grid-row: 5/6;
+					}
+				}
+
+				&.portfolioBlock__cell_4 {
+					@media screen and (max-width: 768px) {
+						grid-column: 1/2;
+						grid-row: 4/5;
+						background-position: left top;
+					}
+				}
+
+				&.portfolioBlock__cell_5 {
 					.cardContentBox__signature {
 						background-image: url('../image/signature3.png');
+					}
+
+					@media screen and (max-width: 960px) {
+						grid-column: 2/3;
+						grid-row: 2/3;
+					}
+
+					@media screen and (max-width: 768px) {
+						grid-column: 1/2;
+						grid-row: 3/4;
 					}
 				}
 
@@ -190,6 +250,10 @@
 					background-size: cover;
 					background-position: left;
 					background-repeat: no-repeat;
+
+					@media screen and (max-width: 768px) {
+						background-position: left top;
+					}
 				}
 
 				&.portfolioBlock__cell_bg_jaredLetoGucciSquare {
@@ -197,6 +261,10 @@
 					background-size: cover;
 					background-position: left;
 					background-repeat: no-repeat;
+
+					@media screen and (max-width: 768px) {
+						background-position: left top;
+					}
 				}
 
 				&.portfolioBlock__cell_gr_2-4 {
@@ -205,8 +273,19 @@
 					background-color: blue;
 					background-image: url('../image/jaredLetoGucciVertical.jpg');
 					background-size: cover;
-					background-position: left;
+					background-position: left center;
 					background-repeat: no-repeat;
+
+					@media screen and (max-width: 960px) {
+						grid-column: 2/3;
+						grid-row: 3/5;
+					}
+
+					@media screen and (max-width: 768px) {
+						grid-column: 1/2;
+						grid-row: 7/9;
+						background-position: center top;
+					}
 				}
 
 				&.portfolioBlock__cell_gc_1-3 {
@@ -217,6 +296,16 @@
 					background-size: cover;
 					background-position: left;
 					background-repeat: no-repeat;
+
+					@media screen and (max-width: 960px) {
+						grid-row: 4/5;
+						grid-column: 1/2;
+					}
+
+					@media screen and (max-width: 768px) {
+						grid-column: 1/2;
+						grid-row: 6/7;
+					}
 				}
 
 				.portfolioBlock__cardContentBox {
@@ -239,6 +328,10 @@
 								font-family: 'Roboto', sans-serif;
 								font-size: 1.6vmin;
 								font-weight: 100;
+
+								@media screen and (max-width: 768px) {
+									font-size: 4vmin;
+								}
 							}
 						}
 
@@ -260,6 +353,11 @@
 								font-size: 1.2vmin;
 								font-weight: 300;
 								line-height: 15px;
+
+								@media screen and (max-width: 768px) {
+									font-size: 3vmin;
+									line-height: 25px;
+								}
 							}
 						}
 
@@ -293,11 +391,21 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 
+				@media screen and (max-width: 768px) {
+					top: 30%;
+					left: 50%;
+					transform: translate(-50%, -30%);
+				}
+
 				.contentBox__titleWrap {
 					width: 100%;
 					height: 15%;
 					display: table;
 					text-align: center;
+
+					@media screen and (max-width: 1024px) {
+						height: 5%;
+					}
 
 					.contentBox__title {
 						display: table-cell;
@@ -313,6 +421,10 @@
 					display: table;
 					text-align: center;
 					margin: 0 auto;
+
+					@media screen and (max-width: 768px) {
+						height: 15%;
+					}
 
 					.contentBox__text {
 						display: table-cell;
@@ -333,6 +445,15 @@
 						float: left;
 						width: 33.333333333%;
 						height: 50%;
+
+						@media screen and (max-width: 1024px) {
+							width: 50%;
+						}
+
+						@media screen and (max-width: 768px) {
+							width: 100%;
+							height: 25%;
+						}
 
 						.contentBox__iconItemWrap {
 							display: block;
@@ -368,11 +489,19 @@
 								text-align: left;
 								display: table;
 
+								@media screen and (max-width: 768px) {
+									height: 50%;
+								}
+
 								.contentBox__descriptionTitle {
 									display: table-cell;
 									vertical-align: middle;
 									font-family: 'Roboto', sans-serif;
 									font-size: 1.4vmin;
+
+									@media screen and (max-width: 768px) {
+										font-size: 2vmin;
+									}
 								}
 							}
 
@@ -385,6 +514,10 @@
 									font-family: 'Roboto', sans-serif;
 									font-size: 1.2vmin;
 									font-weight: 200;
+
+									@media screen and (max-width: 768px) {
+										font-size: 1.8vmin;
+									}
 								}
 							}
 						}
@@ -571,11 +704,21 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 
+				@media screen and (max-width: 768px) {
+					top: 30%;
+					left: 50%;
+					transform: translate(-50%, -30%);
+				}
+
 				.feedbackBlock__titleWrap {
 					width: 100%;
 					height: 20%;
 					text-align: center;
 					display: table;
+
+					@media screen and (max-width: 768px) {
+						height: 10%;
+					}
 
 					.feedbackBlock__title {
 						display: table-cell;
@@ -594,6 +737,10 @@
 						height: 100%;
 						text-align: justify;
 
+						@media screen and (max-width: 1024px) {
+							padding: 0 15px;
+						}
+
 						.feedbackBlock__input {
 							font-family: "Roboto", sans-serif;
 							outline: 0;
@@ -604,6 +751,10 @@
 							padding: 15px;
 							box-sizing: border-box;
 							font-size: 16px;
+
+							@media screen and (max-width: 768px) {
+								width: 100%;
+							}
 
 							&_size-messageInput {
 								width: 100%;
@@ -653,6 +804,13 @@
 				left: 50%;
 				transform: translate(-50%, -10%);
 
+				@media screen and (max-width: 960px) {
+					height: 80%;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
 				.contactUsBlock__logo {
 					width: 30%;
 					height: 100%;
@@ -662,6 +820,11 @@
 					background-size: contain;
 					background-position: center;
 					background-repeat: no-repeat;
+
+					@media screen and (max-width: 960px) {
+						width: 100%;
+						height: 33.333333333%;
+					}
 				}
 
 				.contactUsBlock__communicationWrap {
@@ -669,6 +832,11 @@
 					height: 100%;
 					display: block;
 					float: left;
+
+					@media screen and (max-width: 960px) {
+						width: 100%;
+						height: 33.333333333%;
+					}
 
 					.contactUsBlock__communicationBox {
 						width: 80%;
@@ -684,6 +852,10 @@
 							height: 20%;
 							display: table;
 
+							@media screen and (max-width: 960px) {
+								text-align: center;
+							}
+
 							.contactUsBlock__communicationTitle {
 								display: table-cell;
 								vertical-align: middle;
@@ -697,6 +869,10 @@
 							width: 100%;
 							height: 80%;
 							padding-top: 30px;
+
+							@media screen and (max-width: 960px) {
+								text-align: center;
+							}
 
 							.contactUsBlock__communicationItem {
 								font-family: 'Roboto', sans-serif;
@@ -714,6 +890,11 @@
 					display: block;
 					float: left;
 
+					@media screen and (max-width: 960px) {
+						width: 100%;
+						height: 33.333333333%;
+					}
+
 					.contactUsBlock__twitterBox {
 						width: 80%;
 						max-width: 100%;
@@ -727,6 +908,10 @@
 							width: 100%;
 							height: 20%;
 							display: table;
+
+							@media screen and (max-width: 960px) {
+								text-align: center;
+							}
 
 							.contactUsBlock__twitterTitle {
 								display: table-cell;
